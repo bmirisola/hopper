@@ -6,7 +6,7 @@ def get_audio():
     while True:
         with sr.Microphone() as source:
             print("Listening")
-            audio = r.listen(source)
+            audio = r.listen(source, timeout=1.5)
             try:
                 said = r.recognize_google(audio, language="en-US")
                 print(said)
