@@ -22,9 +22,9 @@
 
 ### RPI.GPIO
 
-### Speech Recognition [source + guide] (https://realpython.com/python-speech-recognition/#how-speech-recognition-works-an-overview)
+### Speech Recognition [source + guide](https://realpython.com/python-speech-recognition/#how-speech-recognition-works-an-overview)
 
-### playsound [source + guide] (https://www.geeksforgeeks.org/play-sound-in-python/)
+### playsound [source + guide](https://www.geeksforgeeks.org/play-sound-in-python/)
 - Install
 ```sudo apt-get install gstreamer-1.0```
 - sudo apt-get install gstreamer-1.0 [source](https://stackoverflow.com/questions/40246437/problems-with-gst-in-python-program)
