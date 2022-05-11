@@ -22,7 +22,7 @@
 
 ### RPI.GPIO
 
-###
+### Speech Recognition [source + guide] (https://realpython.com/python-speech-recognition/#how-speech-recognition-works-an-overview)
 
 ### playsound
 - Install
