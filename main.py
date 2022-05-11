@@ -13,7 +13,7 @@ def get_audio():
                 said = r.recognize_google(audio, language="en-US")
                 print(said)
                 if(said.__contains__("Robert")):
-                    print(ding)
+                    playsound(ding)
             except sr.WaitTimeoutError as e:
                 pass
             except sr.UnknownValueError:
@@ -23,5 +23,4 @@ def lightSwitch(state):
     pass
 
 if __name__ == "__main__":
-    #get_audio()
-    playsound(ding)
+    get_audio()
