@@ -1,20 +1,22 @@
 # Python 3.6.2
 - Install [source](https://krystof.io/installing-alternative-python-versions-on-raspberry-pi/)
-  - cd ~/Downloads
-  - sudo apt update
-  - sudo apt upgrade
-  - sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
+```
+cd ~/Downloads
+sudo apt update
+sudo apt upgrade
+sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
+```
   - wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz
   - tar zxf Python-3.6.2.tgz
   - cd Python-3.6.2
   - ./configure --enable-optimizations
   - make -j 4
   - sudo make altinstall
-- To verify install
-  - python3.6 -V
-- To install Python Packages
-  - sudo python3.6 -m pip install --upgrade pip
-  - sudo python3.6 -m pip install RPi.GPIO
+  - To verify install
+    - python3.6 -V
+  - To install Python Packages
+    - sudo python3.6 -m pip install --upgrade pip
+    - sudo python3.6 -m pip install RPi.GPIO
 
 # pygobject
 ### optional dependency for playsound
