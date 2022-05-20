@@ -9,11 +9,25 @@ def get_audio():
         with sr.Microphone() as source:
             print("Listening")
             try:
-                audio = r.listen(source, timeout=2, phrase_time_limit= 1.5)
+                audio = r.listen(source, timeout=2, phrase_time_limit= 2)
                 said = r.recognize_google(audio, language="en-US")
                 print(said)
-                if(said.__contains__("Robert")):
+                if(said.__contains__("Robert") or said.lower().__contains__("hopper")):
                     playsound(ding)
+                    print("Now listening for light command")
+                    try:
+                        lights_audio = r.listen(source, timeout=10, phrase_time_limit=6)
+                        lights_said = r.recognize_google(lights_audio, language="en-US")
+                        if (lights_said.__contains__('on')):
+                            print('on')
+
+                        elif (lights_said.__contains__('off')):
+                            print('off')
+                    except sr.WaitTimeoutError as e:
+                        pass
+                    except sr.UnknownValueError:
+                        print("Google Speech Recognition could not understand audio")
+
             except sr.WaitTimeoutError as e:
                 pass
             except sr.UnknownValueError:
