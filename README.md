@@ -43,3 +43,5 @@
     - sudo apt-get install libcairo2-dev [source](https://github.com/3b1b/manim/issues/751)
     - sudo apt install libgirepository1.0-dev [source](https://stackoverflow.com/questions/18025730/pygobject-2-28-6-wont-configure-no-package-gobject-introspection-1-0-found)
     - sudo python3.6 -m pip install pygobject
+
+Audio file must be called ding.mp3 and placed in project root
