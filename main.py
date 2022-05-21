@@ -21,10 +21,10 @@ def get_audio():
                         lights_audio = r.listen(source, timeout=10, phrase_time_limit=6)
                         lights_said = r.recognize_google(lights_audio, language="en-US")
                         if (lights_said.__contains__('on')):
-                            lightSwitch(servo.LIGHT_SWITCH_STATES.ON)
+                            servo.light_switch_operation(servo.LIGHT_SWITCH_STATES.ON)
 
                         elif (lights_said.__contains__('off')):
-                            lightSwitch(servo.LIGHT_SWITCH_STATES.OFF)
+                            servo.light_switch_operation(servo.LIGHT_SWITCH_STATES.OFF)
                     except sr.WaitTimeoutError as e:
                         pass
                     except sr.UnknownValueError:
@@ -35,12 +35,7 @@ def get_audio():
             except sr.UnknownValueError:
                 print("Google Speech Recognition could not understand audio")
 
-def lightSwitch(state):
-    if(state == servo.LIGHT_SWITCH_STATES.OFF):
-        print('off')
 
-    elif(state == servo.LIGHT_SWITCH_STATES.ON):
-        print('on')
 
 if __name__ == "__main__":
     get_audio()
