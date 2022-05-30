@@ -2,6 +2,7 @@ import speech_recognition as sr
 from playsound import playsound
 import servo
 import os
+import time
 r = sr.Recognizer()
 ding = os.getcwd() + '/ding.mp3'
 
@@ -17,6 +18,7 @@ def get_audio():
                 if(said.__contains__("Robert") or said.lower().__contains__("hopper")):
                     playsound(ding)
                     print("Now listening for light command")
+                    time.sleep(1)
                     try:
                         lights_audio = r.listen(source, timeout=10, phrase_time_limit=6)
                         lights_said = r.recognize_google(lights_audio, language="en-US")
