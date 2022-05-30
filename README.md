@@ -1,6 +1,7 @@
 ## Python 3.6.2
+
 - Install [source](https://krystof.io/installing-alternative-python-versions-on-raspberry-pi/)
-  - ```
+    - ```
     cd ~/Downloads
     sudo apt update
     sudo apt upgrade -y
@@ -13,35 +14,37 @@
     sudo make altinstall
     ```
 - To verify install
-  - ```python3.6 -V```
+    - ```python3.6 -V```
 - To install Python Packages
-  - ```sudo python3.6 -m pip install --upgrade pip```
-  - sudo python3.6 -m pip install RPi.GPIO
-
-
+    - ```sudo python3.6 -m pip install --upgrade pip```
+    - sudo python3.6 -m pip install RPi.GPIO
 
 ### RPI.GPIO
 
 ### Speech Recognition [source + guide](https://realpython.com/python-speech-recognition/#how-speech-recognition-works-an-overview)
 
 ### playsound [source + guide](https://www.geeksforgeeks.org/play-sound-in-python/)
-- Install
-  - ```sudo apt-get install gstreamer-1.0```
-  - sudo apt-get install gstreamer-1.0 [source](https://stackoverflow.com/questions/40246437/problems-with-gst-in-python-program)
 
+- Install
+    - ```sudo apt-get install gstreamer-1.0```
+    - sudo apt-get install
+      gstreamer-1.0 [source](https://stackoverflow.com/questions/40246437/problems-with-gst-in-python-program)
 
 ### pygobject
+
 #### optional dependency for playsound
+
 - Install
-  - ```
+    - ```
     sudo apt-get install pkg-config
     sudo apt-get install libcairo2-dev
     sudo apt install libgirepository1.0-dev
     sudo python3.6 -m pip install pygobject
     ```
-    - sudo apt-get install pkg-config [source](https://github.com/3b1b/manim/issues/751)
-    - sudo apt-get install libcairo2-dev [source](https://github.com/3b1b/manim/issues/751)
-    - sudo apt install libgirepository1.0-dev [source](https://stackoverflow.com/questions/18025730/pygobject-2-28-6-wont-configure-no-package-gobject-introspection-1-0-found)
-    - sudo python3.6 -m pip install pygobject
+        - sudo apt-get install pkg-config [source](https://github.com/3b1b/manim/issues/751)
+        - sudo apt-get install libcairo2-dev [source](https://github.com/3b1b/manim/issues/751)
+        - sudo apt install
+          libgirepository1.0-dev [source](https://stackoverflow.com/questions/18025730/pygobject-2-28-6-wont-configure-no-package-gobject-introspection-1-0-found)
+        - sudo python3.6 -m pip install pygobject
 
 Audio file must be called ding.mp3 and placed in project root
